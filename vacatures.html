@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vacatures | jobbord.nl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261116b">
+</head>
+<body data-page="results">
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="jobbord.nl, naar de homepage"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="4" width="28" height="24" rx="6" fill="#1f5ae0"/><rect x="7" y="10" width="11" height="3" rx="1.5" fill="#fff"/><rect x="7" y="16" width="18" height="3" rx="1.5" fill="#fff" opacity=".55"/><circle cx="23.5" cy="11.5" r="3" fill="#6fdcab"/></svg><span>jobbord<b>.nl</b></span></a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="vacatures.html" aria-current="page">Vacatures</a>
+    <a href="werkgevers.html">Voor werkgevers</a>
+    <a class="btn-line keep" href="dashboard.html">Inloggen</a>
+  </nav>
+</div></header>
+
+<div class="searchbar"><div class="wrap">
+  <form class="search" id="search" role="search">
+    <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sr">Functie of vakgebied</span><input name="q" placeholder="Functie, bijvoorbeeld monteur" autocomplete="off"></label>
+    <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="sr">Plaats</span><input name="l" placeholder="Plaats" autocomplete="off" list="steden"></label>
+    <button class="btn" type="submit">Zoeken</button>
+  </form>
+  <datalist id="steden"></datalist>
+</div></div>
+
+<main class="wrap results">
+  <aside>
+    <button class="btn ghost small filter-toggle" type="button" aria-expanded="false" aria-controls="filters">Filters</button>
+    <form class="filters" id="filters" aria-label="Filters">
+      <div class="lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Alleen directe werkgevers. Uitzendbureaus en detacheerders worden automatisch geweerd.</span></div>
+      <fieldset><legend>Provincie</legend><select name="prov" id="f-prov"><option value="">Heel Nederland</option></select></fieldset>
+      <fieldset id="f-sector"><legend>Vakgebied</legend></fieldset>
+      <fieldset><legend>Dienstverband</legend>
+        <label><input type="checkbox" name="type" value="Vast"> Vast</label>
+        <label><input type="checkbox" name="type" value="Tijdelijk"> Tijdelijk</label>
+        <label><input type="checkbox" name="type" value="Parttime"> Parttime</label>
+      </fieldset>
+      <fieldset><legend>Geplaatst</legend>
+        <label><input type="radio" name="days" value="99" checked> Altijd</label>
+        <label><input type="radio" name="days" value="1"> Afgelopen 24 uur</label>
+        <label><input type="radio" name="days" value="3"> Afgelopen 3 dagen</label>
+        <label><input type="radio" name="days" value="7"> Afgelopen week</label>
+      </fieldset>
+    </form>
+  </aside>
+  <section aria-label="Zoekresultaten">
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="list" id="list"></div>
+  </section>
+  <section class="detail" id="detail" aria-label="Vacature"></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 jobbord.nl</span>
+  <nav aria-label="Footer"><a href="vacatures.html">Vacatures</a><a href="werkgevers.html">Voor werkgevers</a><a href="#">Privacy</a><a href="#">Voorwaarden</a><a href="#">Vacature melden</a></nav>
+  <span>Website door <a href="https://maxxmarketing.eu">MaxxMarketing</a></span>
+  <span class="foot-note">Demo: alle vacatures, bedrijven en sollicitanten zijn verzonnen.</span>
+</div></footer>
+<script src="js/data.js?v=20261116b"></script>
+<script src="js/app.js?v=20261116b"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gratis vacatures plaatsen | jobbord.nl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261116b">
+</head>
+<body data-page="onboarding">
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="jobbord.nl, naar de homepage"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="4" width="28" height="24" rx="6" fill="#1f5ae0"/><rect x="7" y="10" width="11" height="3" rx="1.5" fill="#fff"/><rect x="7" y="16" width="18" height="3" rx="1.5" fill="#fff" opacity=".55"/><circle cx="23.5" cy="11.5" r="3" fill="#6fdcab"/></svg><span>jobbord<b>.nl</b></span></a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="vacatures.html">Vacatures</a>
+    <a href="werkgevers.html" aria-current="page">Voor werkgevers</a>
+    <a class="btn-line keep" href="dashboard.html">Inloggen</a>
+  </nav>
+</div></header>
+
+<main class="wrap onb">
+  <ol class="steps" id="steps">
+    <li data-state="now"><span><strong>Inloggen met Google</strong>Geen wachtwoord nodig</span></li>
+    <li><span><strong>Je bedrijf</strong>We zoeken het voor je op</span></li>
+    <li><span><strong>E-mail bevestigen</strong>Met een code</span></li>
+    <li><span><strong>Vacature plaatsen</strong>Gratis online</span></li>
+  </ol>
+
+  <div>
+    <!-- stap 1 -->
+    <section class="card" data-step="1">
+      <h1>Gratis vacatures plaatsen</h1>
+      <p class="sub">Voor bedrijven die zelf personeel zoeken. Het kost niets en je hebt geen wachtwoord nodig.</p>
+      <button class="google" type="button" id="google"><svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Doorgaan met Google</button>
+      <p class="tip">Uitzendbureaus, detacheerders en wervingsbureaus kunnen geen vacatures plaatsen.</p>
+    </section>
+
+    <!-- stap 2 -->
+    <section class="card" data-step="2" hidden>
+      <h2>Welk bedrijf zoekt personeel?</h2>
+      <p class="sub">Typ de naam van je bedrijf of het KvK-nummer.</p>
+      <div class="field"><label class="sr" for="kvk">Bedrijfsnaam of KvK-nummer</label><input type="text" id="kvk" placeholder="Bijvoorbeeld Hofstede Installaties" autocomplete="off" aria-controls="kvk-list"></div>
+      <div id="kvk-list" aria-live="polite"></div>
+      <div id="kvk-result"></div>
+    </section>
+
+    <!-- stap 3 -->
+    <section class="card" data-step="3" hidden>
+      <h2>Bevestig je bedrijfsmail</h2>
+      <p class="sub" id="mail-sub">We sturen een code naar een e-mailadres op het domein van je bedrijf. Zo weten we dat je er echt werkt.</p>
+      <form id="mail-form" novalidate>
+        <div class="field"><label for="bmail">Je e-mailadres</label><div class="mailsplit"><input type="text" id="bmail" autocomplete="off" autocapitalize="none" placeholder="jouw naam"><span id="domain">@bedrijf.nl</span></div></div>
+        <p class="err" id="mail-err" hidden></p>
+        <button class="btn" type="submit">Stuur code</button>
+        <p class="tip">Geen e-mailadres bij het bedrijf? <button type="button" id="manual">Laat ons het handmatig controleren</button></p>
+      </form>
+      <form id="code-form" novalidate hidden>
+        <div class="field"><label for="code">Code uit de mail</label><input type="text" id="code" inputmode="numeric" maxlength="6" placeholder="6 cijfers" autocomplete="one-time-code"><small id="code-sent"></small></div>
+        <p class="err" id="code-err" hidden></p>
+        <button class="btn" type="submit">Bevestigen</button>
+      </form>
+    </section>
+
+    <!-- stap 4 -->
+    <section class="card" data-step="4" hidden>
+      <h2>Je eerste vacature</h2>
+      <p class="sub">Je kunt alles later nog aanpassen.</p>
+      <form id="job-form" novalidate>
+        <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field"><label for="j-title">Functie</label><input type="text" id="j-title" placeholder="Bijvoorbeeld servicemonteur"></div>
+        <div class="row">
+          <div class="field"><label for="j-city">Plaats</label><input type="text" id="j-city"></div>
+          <div class="field"><label for="j-type">Dienstverband</label><select id="j-type"><option>Vast</option><option>Tijdelijk</option><option>Parttime</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="j-min">Salaris vanaf</label><input type="text" id="j-min" inputmode="numeric" placeholder="2800"></div>
+          <div class="field"><label for="j-max">Tot</label><input type="text" id="j-max" inputmode="numeric" placeholder="3500"></div>
+          <div class="field"><label for="j-unit">Per</label><select id="j-unit"><option value="maand">Maand</option><option value="uur">Uur</option></select></div>
+        </div>
+        <div class="field"><label for="j-desc">Wat gaat iemand doen, en wat bied je?</label><textarea id="j-desc" rows="5" placeholder="Bijvoorbeeld: onderhoud aan cv-ketels bij klanten in de regio. Bus van de zaak, vaste klanten, 40 uur."></textarea></div>
+        <div class="field"><span class="lbl">Wat moet iemand minimaal hebben?</span>
+          <div class="chips">
+            <label><input type="checkbox" name="ko" value="Heb je rijbewijs B?"> Rijbewijs B</label>
+            <label><input type="checkbox" name="ko" value="Heb je rijbewijs C of CE?"> Rijbewijs C/CE</label>
+            <label><input type="checkbox" name="ko" value="Heb je een geldig VCA-diploma?"> VCA</label>
+            <label><input type="checkbox" name="ko" value="Heb je een MBO-diploma in dit vak?"> MBO-diploma</label>
+            <label><input type="checkbox" name="ko" value="Heb je ervaring in dit vak?"> Ervaring</label>
+            <label><input type="checkbox" name="ko" value="Spreek je Nederlands?"> Nederlands</label>
+          </div><small>Sollicitanten antwoorden met ja of nee.</small></div>
+        <div class="field"><label for="j-mail">Sollicitaties mailen naar</label><input type="email" id="j-mail" readonly><small>Collega's toevoegen kan straks in je dashboard.</small></div>
+        <p class="err" id="job-err" hidden></p>
+        <button class="btn" type="submit">Vacature plaatsen</button>
+      </form>
+    </section>
+
+    <section class="card" data-step="5" hidden>
+      <h2>Je vacature staat online</h2>
+      <p class="sub" id="live-sub"></p>
+      <a class="btn" href="dashboard.html">Naar je dashboard</a>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 jobbord.nl</span>
+  <nav aria-label="Footer"><a href="vacatures.html">Vacatures</a><a href="werkgevers.html">Voor werkgevers</a><a href="#">Privacy</a><a href="#">Voorwaarden</a></nav>
+  <span>Website door <a href="https://maxxmarketing.eu">MaxxMarketing</a></span>
+  <span class="foot-note">Demo: alle vacatures, bedrijven en sollicitanten zijn verzonnen.</span>
+</div></footer>
+<script src="js/data.js?v=20261116b"></script>
+<script src="js/app.js?v=20261116b"></script>
+</body>
+</html>

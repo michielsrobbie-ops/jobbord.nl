@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | jobbord.nl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261116b">
+</head>
+<body data-page="dashboard">
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="jobbord.nl, naar de homepage"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="4" width="28" height="24" rx="6" fill="#1f5ae0"/><rect x="7" y="10" width="11" height="3" rx="1.5" fill="#fff"/><rect x="7" y="16" width="18" height="3" rx="1.5" fill="#fff" opacity=".55"/><circle cx="23.5" cy="11.5" r="3" fill="#6fdcab"/></svg><span>jobbord<b>.nl</b></span></a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="vacatures.html">Vacatures</a>
+    <a class="btn-line keep" href="werkgevers.html">Nieuwe vacature</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <h1>Hofstede Installaties</h1>
+  <p><span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Directe werkgever, gecontroleerd</span></p>
+
+  <div class="dash">
+    <div>
+      <section class="panel">
+        <h2>Nieuwe sollicitaties</h2>
+        <p class="sub">Bel snel: wie binnen een dag contact heeft, haakt het minst vaak af.</p>
+        <table class="tbl">
+          <thead><tr><th scope="col">Naam</th><th scope="col" class="hide-sm">Vacature</th><th scope="col">Harde eisen</th><th scope="col">Bruikbaar?</th></tr></thead>
+          <tbody id="apps"></tbody>
+        </table>
+      </section>
+      <section class="panel">
+        <h2>Je vacatures</h2>
+        <p class="sub">Vacatures verlopen na 60 dagen. Je krijgt een week van tevoren een mail om te verlengen.</p>
+        <table class="tbl">
+          <thead><tr><th scope="col">Functie</th><th scope="col">Status</th><th scope="col" class="num hide-sm">Bekeken</th><th scope="col" class="num">Sollicitaties</th></tr></thead>
+          <tbody>
+            <tr><td><a href="vacatures.html?id=1">Servicemonteur installatietechniek</a></td><td><span class="status live">Online</span></td><td class="num hide-sm">412</td><td class="num">9</td></tr>
+            <tr><td><a href="vacatures.html?id=13">Werkvoorbereider installaties</a></td><td><span class="status live">Online</span></td><td class="num hide-sm">187</td><td class="num">3</td></tr>
+            <tr><td>Leerling-monteur BBL</td><td><span class="status end">Verlopen</span></td><td class="num hide-sm">630</td><td class="num">14</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div>
+      <section class="panel">
+        <h2>Meldingen per e-mail</h2>
+        <p class="sub">Wie krijgt een mail als er iemand solliciteert?</p>
+        <ul class="mails" id="mails"></ul>
+        <form class="add" id="add-mail" novalidate>
+          <label class="sr" for="new-mail">E-mailadres toevoegen</label>
+          <input type="email" id="new-mail" placeholder="naam@hofstede-demo.nl">
+          <button class="btn small" type="submit">Toevoegen</button>
+        </form>
+        <p class="err" id="add-err" hidden></p>
+      </section>
+      <section class="panel">
+        <h2>Bedrijfsgegevens</h2>
+        <p class="sub">Opgehaald uit het KvK-register. Klopt er iets niet? Pas het aan bij de KvK, wij nemen het automatisch over.</p>
+        <table class="tbl">
+          <tbody>
+            <tr><td>Activiteit</td><td>4322 Loodgieters- en installatiebedrijven</td></tr>
+            <tr><td>Vestiging</td><td>Zwolle</td></tr>
+            <tr><td>Actief sinds</td><td>1998</td></tr>
+            <tr><td>Website</td><td>hofstede-demo.nl</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 jobbord.nl</span>
+  <nav aria-label="Footer"><a href="vacatures.html">Vacatures</a><a href="werkgevers.html">Voor werkgevers</a><a href="#">Privacy</a><a href="#">Voorwaarden</a></nav>
+  <span>Website door <a href="https://maxxmarketing.eu">MaxxMarketing</a></span>
+  <span class="foot-note">Demo: alle vacatures, bedrijven en sollicitanten zijn verzonnen.</span>
+</div></footer>
+<script src="js/data.js?v=20261116b"></script>
+<script src="js/app.js?v=20261116b"></script>
+</body>
+</html>
