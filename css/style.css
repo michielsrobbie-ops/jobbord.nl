@@ -2,12 +2,12 @@
 :root{
   --paper:#ffffff;
   --mist:#f2f5f9;
-  --ink:#16213a;
+  --ink:#0A2452;
   --ink-2:#4a5672;
   --line:#dce2ea;
-  --blue:#1f5ae0;
-  --blue-d:#1747b5;
-  --blue-t:#e8effd;
+  --blue:#0448AF;
+  --blue-d:#03398C;
+  --blue-t:#E6EEFA;
   --green:#0e7a55;
   --green-t:#e2f3ea;
   --red:#b42318;
@@ -30,7 +30,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .top .wrap{display:flex;align-items:center;gap:24px;height:68px}
 .logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:800;font-size:21px;letter-spacing:-.02em}
 .logo b{color:var(--blue);font-weight:800}
-.logo-mark{width:30px;height:30px}
+.logo img{height:40px;width:auto}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand img{height:28px;width:auto}
 .nav{margin-left:auto;display:flex;align-items:center;gap:6px}
 .nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:8px 12px;border-radius:8px}
 .nav a:hover{background:var(--mist)}

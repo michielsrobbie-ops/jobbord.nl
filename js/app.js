@@ -7,7 +7,7 @@ const JOBS=window.JOBS||[];
 const page=document.body.dataset.page;
 
 /* logo-tegel met initialen, vaste kleur per bedrijf */
-const TONES=["#1f5ae0","#0e7a55","#b4531a","#6b3fa0","#0f6b8a","#a1293b","#3d5a1e","#7a5c00","#334155"];
+const TONES=["#0448AF","#0e7a55","#b4531a","#6b3fa0","#0f6b8a","#a1293b","#3d5a1e","#7a5c00","#334155"];
 function av(name,cls=""){
   const ini=name.replace(/\b(B\.?V\.?|en|de|van|der)\b/gi,"").trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();
   let h=0;for(const c of name)h=(h*31+c.charCodeAt(0))>>>0;
