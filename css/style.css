@@ -303,3 +303,43 @@ footer a:hover{color:var(--blue)}
 .chosen .av{width:40px;height:40px;font-size:15px;border-radius:8px}
 .chosen small{display:block;color:var(--ink-2)}
 @media (max-width:760px){.latest{grid-template-columns:1fr}.job{gap:12px}.av{width:40px;height:40px;font-size:15px}}
+
+/* ---- tijdelijke site (nov 2026) ---- */
+.building{display:inline-block;margin:0 0 18px;font-size:14px;font-weight:700;color:#7a5c00;background:#fff4cc;border-radius:999px;padding:5px 12px}
+.hero h1{max-width:18ch}
+a.job{text-decoration:none;color:inherit}
+a.job .btn{margin-top:12px}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.how h2{margin-bottom:14px}
+.how p{color:var(--ink-2);margin:0;max-width:52ch}
+.how-steps{margin:0;padding-left:22px;color:var(--ink-2)}
+.how-steps li{margin:0 0 10px;padding-left:4px}
+.how-steps strong{color:var(--ink)}
+.vac{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:48px;padding-top:32px;padding-bottom:72px;align-items:start}
+.vac .back{margin:0 0 16px;font-size:15px}
+.vac h1{font-size:clamp(30px,4vw,42px);letter-spacing:-.025em;line-height:1.1;margin:0 0 14px}
+.vac-text h2{font-size:20px;margin:30px 0 8px}
+.vac-text p{color:var(--ink-2);max-width:62ch;margin:0 0 10px}
+.vac-text ul.txt{padding-left:20px;margin:0;color:var(--ink-2)}
+.vac-form{position:sticky;top:24px}
+.vac-form .apply{margin-top:0;padding:24px}
+.vac-form h2{font-size:22px;margin:0 0 4px}
+fieldset.field{border:0;padding:0;margin:0 0 14px}
+.choices{display:flex;flex-direction:column;gap:8px}
+.choices label{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:11px 12px;cursor:pointer;font-weight:600}
+.choices input{accent-color:var(--blue);width:18px;height:18px;margin:0}
+.choices label:has(input:checked){border-color:var(--blue);background:var(--blue-t);color:var(--blue-d)}
+.opt{font-weight:400;color:var(--ink-2)}
+.fine{font-size:13px;color:var(--ink-2);margin:12px 0 0}
+.apply .btn{width:100%}
+.mobile-only{display:none}
+.legal{max-width:760px;padding-top:40px;padding-bottom:72px}
+.legal h1{font-size:34px;letter-spacing:-.02em}
+.legal h2{font-size:20px;margin:28px 0 6px}
+.legal p{color:var(--ink-2)}
+@media (max-width:900px){
+  .vac{grid-template-columns:1fr;gap:28px}
+  .vac-form{position:static}
+  .mobile-only{display:inline-flex;margin-top:4px}
+  .how{grid-template-columns:1fr;gap:32px}
+}
