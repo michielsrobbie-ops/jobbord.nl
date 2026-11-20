@@ -19,7 +19,7 @@
 <meta name="description" content="jobbord.nl brengt bedrijven en werkzoekenden bij elkaar. Vacatures bij gecontroleerde bedrijven, zonder uitzendbureaus. De site is in opbouw, maar je kunt al solliciteren.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css?v=20261120d">
+<link rel="stylesheet" href="/css/style.css?v=20261120e">
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -36,9 +36,17 @@
 <section class="sec" style="padding-top:0"><div class="wrap">
   <h2>Open vacatures</h2>
   <p class="sub">Solliciteer direct bij het bedrijf, met je cv.</p>
-  <div class="latest">
+<!-- filters:start -->
+  <form class="filters" id="filters" role="search" action="/" method="get">
+    <label class="f-zoek"><span class="sr">Zoek op functie of trefwoord</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" name="q" placeholder="Functie of trefwoord, bijvoorbeeld monteur" autocomplete="off"></label>
+    <label><span class="sr">Provincie</span><select name="provincie"><option value="">Alle provincies</option><option value="flevoland">Flevoland (2)</option><option value="gelderland">Gelderland (10)</option><option value="limburg">Limburg (3)</option><option value="noord-brabant">Noord-Brabant (15)</option><option value="noord-holland">Noord-Holland (9)</option><option value="overijssel">Overijssel (3)</option><option value="utrecht">Utrecht (4)</option><option value="zuid-holland">Zuid-Holland (8)</option></select></label>
+    <label><span class="sr">Vakgebied</span><select name="vakgebied"><option value="">Alle vakgebieden</option><option value="techniek">Techniek en installatie (12)</option><option value="bouw">Bouw en infra (8)</option><option value="auto">Auto, transport en vervoer (5)</option><option value="productie">Productie en metaal (3)</option><option value="logistiek">Logistiek en magazijn (2)</option><option value="engineering">Kantoor en engineering (6)</option><option value="groen">Groen en tuinbouw (4)</option><option value="horeca">Horeca en winkel (5)</option><option value="zorg">Zorg (2)</option></select></label>
+  </form>
+  <p class="f-aantal" id="f-aantal" aria-live="polite">47 vacatures</p>
+  <div class="f-leeg" id="f-leeg" hidden><p>Geen vacatures gevonden met deze filters.</p><button type="button" class="btn ghost small" id="f-wis">Wis filters</button></div><!-- filters:end -->
+  <div class="latest" id="lijst">
 <!-- vacatures:start -->
-    <a class="job" href="/vacature/servicetechnicus-brandmeldinstallaties-prinsenbeek">
+    <a class="job" href="/vacature/servicetechnicus-brandmeldinstallaties-prinsenbeek" data-provincie="noord-brabant" data-vakgebied="techniek" data-zoek="servicetechnicus brandmeldinstallaties prinsenbeek noord-brabant beveiligingstechniek specialist in beveiligingstechniek techniek en installatie prinsenbeek (bij breda) beveiligingstechniek loondienst, zzp kan ook fulltime auto van de zaak tot € 5.000 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
       <span class="job-body">
         <h3>Servicetechnicus brandmeldinstallaties</h3>
@@ -47,7 +55,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/grondwerker-waddinxveen">
+    <a class="job" href="/vacature/grondwerker-waddinxveen" data-provincie="zuid-holland" data-vakgebied="bouw" data-zoek="grondwerker waddinxveen zuid-holland familiebedrijf familiebedrijf in waddinxveen bouw en infra waddinxveen (bij gouda) familiebedrijf loondienst fulltime bus van de zaak">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6"/><path d="M17 7l-9.5 9.5"/><path d="M4 20l3.5-3.5 2 2L6 22z"/></svg></span>
       <span class="job-body">
         <h3>Grondwerker</h3>
@@ -56,7 +64,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/allround-hovenier-harderwijk">
+    <a class="job" href="/vacature/allround-hovenier-harderwijk" data-provincie="gelderland" data-vakgebied="groen" data-zoek="allround hovenier harderwijk gelderland hoveniers hoveniersbedrijf in harderwijk groen en tuinbouw harderwijk hoveniers loondienst fulltime bus van de zaak mogelijk tot € 4.000 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-9 0 10-3 16-9 16z"/><path d="M4 20c4-4 7-7 11-10"/></svg></span>
       <span class="job-body">
         <h3>Allround hovenier</h3>
@@ -65,7 +73,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/allround-medewerker-kwekerij-ospel">
+    <a class="job" href="/vacature/allround-medewerker-kwekerij-ospel" data-provincie="limburg" data-vakgebied="groen" data-zoek="allround medewerker kwekerij ospel limburg kwekerij kwekerij in ospel groen en tuinbouw ospel (bij weert) kwekerij loondienst 32 tot 40 uur tot € 3.500 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-9 0 10-3 16-9 16z"/><path d="M4 20c4-4 7-7 11-10"/></svg></span>
       <span class="job-body">
         <h3>Allround medewerker kwekerij</h3>
@@ -74,7 +82,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/allround-monteur-machinebouw-steenbergen">
+    <a class="job" href="/vacature/allround-monteur-machinebouw-steenbergen" data-provincie="noord-brabant" data-vakgebied="productie" data-zoek="allround monteur machinebouw steenbergen noord-brabant machinebouw machinebouwer in steenbergen productie en metaal steenbergen machinebouw loondienst fulltime, parttime bespreekbaar tot € 4.500 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
       <span class="job-body">
         <h3>Allround monteur machinebouw</h3>
@@ -83,7 +91,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/allround-monteur-vastgoed-nijmegen">
+    <a class="job" href="/vacature/allround-monteur-vastgoed-nijmegen" data-provincie="gelderland" data-vakgebied="techniek" data-zoek="allround monteur vastgoed nijmegen gelderland vastgoedonderhoud familiebedrijf in vastgoedonderhoud in nijmegen techniek en installatie nijmegen vastgoedonderhoud loondienst 37 uur per week werkbus van de zaak € 2.600 - € 3.750 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
       <span class="job-body">
         <h3>Allround monteur vastgoed</h3>
@@ -92,7 +100,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/allround-timmerman-noord-scharwoude">
+    <a class="job" href="/vacature/allround-timmerman-noord-scharwoude" data-provincie="noord-holland" data-vakgebied="bouw" data-zoek="allround timmerman noord-scharwoude noord-holland bouw bouwbedrijf in noord-scharwoude bouw en infra noord-scharwoude (bij alkmaar) bouw loondienst 32 tot 40 uur start € 4.250 bruto per 4 weken">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12l-8.5 8.5a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 15L22 10.6 13.4 2 9 6.4z"/></svg></span>
       <span class="job-body">
         <h3>Allround timmerman</h3>
@@ -101,7 +109,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/bedrijfsleider-fietsenwinkel-oegstgeest">
+    <a class="job" href="/vacature/bedrijfsleider-fietsenwinkel-oegstgeest" data-provincie="zuid-holland" data-vakgebied="horeca" data-zoek="bedrijfsleider fietsenwinkel oegstgeest zuid-holland fietsenbranche fietsenwinkel in oegstgeest horeca en winkel oegstgeest (bij leiden) fietsenbranche loondienst fulltime (38 uur) tot € 4.100 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="4"/><circle cx="18" cy="17" r="4"/><path d="M6 17l4-8h6l2 8"/><path d="M10 9l2 8"/><path d="M14 5h3"/></svg></span>
       <span class="job-body">
         <h3>Bedrijfsleider fietsenwinkel</h3>
@@ -110,7 +118,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/bedrijfswagenmonteur-oeffelt">
+    <a class="job" href="/vacature/bedrijfswagenmonteur-oeffelt" data-provincie="noord-brabant" data-vakgebied="auto" data-zoek="bedrijfswagenmonteur oeffelt noord-brabant transport transportbedrijf in oeffelt auto, transport en vervoer oeffelt (bij boxmeer) transport loondienst 32 tot 40 uur reiskostenvergoeding tot € 4.500 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2z"/><path d="M14 10h4l4 4v2h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
       <span class="job-body">
         <h3>Bedrijfswagenmonteur</h3>
@@ -119,7 +127,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/betonwerker-monster">
+    <a class="job" href="/vacature/betonwerker-monster" data-provincie="zuid-holland" data-vakgebied="bouw" data-zoek="betonwerker monster zuid-holland betonbouw betonbouwbedrijf in monster bouw en infra monster (westland) betonbouw loondienst, zzp kan ook fulltime tot € 4.000 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
       <span class="job-body">
         <h3>Betonwerker</h3>
@@ -128,7 +136,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/calculator-meet-en-regeltechniek-s-gravendeel">
+    <a class="job" href="/vacature/calculator-meet-en-regeltechniek-s-gravendeel" data-provincie="zuid-holland" data-vakgebied="engineering" data-zoek="calculator meet- en regeltechniek &#x27;s-gravendeel zuid-holland automatisering specialist in besturingssystemen en automatisering in &#x27;s-gravendeel kantoor en engineering &#x27;s-gravendeel (bij dordrecht) automatisering loondienst fulltime (40 uur) cao metaal en techniek">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></span>
       <span class="job-body">
         <h3>Calculator meet- en regeltechniek</h3>
@@ -137,7 +145,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/cnc-frezer-someren">
+    <a class="job" href="/vacature/cnc-frezer-someren" data-provincie="noord-brabant" data-vakgebied="productie" data-zoek="cnc-frezer someren noord-brabant metaalbewerking metaalbewerkingsbedrijf in someren productie en metaal someren (bij helmond) metaalbewerking loondienst 32 tot 38 uur tot € 4.500 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v5M12 15v5M4 12h5M15 12h5"/></svg></span>
       <span class="job-body">
         <h3>CNC-frezer</h3>
@@ -146,7 +154,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/eerste-automonteur-apk-utrecht">
+    <a class="job" href="/vacature/eerste-automonteur-apk-utrecht" data-provincie="utrecht" data-vakgebied="auto" data-zoek="eerste automonteur met apk utrecht utrecht autogarage autogarage in utrecht auto, transport en vervoer utrecht autogarage loondienst fulltime (38 uur) tot € 4.500 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
       <span class="job-body">
         <h3>Eerste automonteur met APK</h3>
@@ -155,7 +163,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/eerste-monteur-installatietechniek-den-helder">
+    <a class="job" href="/vacature/eerste-monteur-installatietechniek-den-helder" data-provincie="noord-holland" data-vakgebied="techniek" data-zoek="eerste monteur installatietechniek den helder noord-holland installatietechniek installatiebedrijf in den helder techniek en installatie den helder installatietechniek loondienst 32 tot 38 uur bus van de zaak tot € 4.300 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h8a4 4 0 0 1 4 4v8"/><path d="M4 4v8M12 20h8"/></svg></span>
       <span class="job-body">
         <h3>Eerste monteur installatietechniek</h3>
@@ -164,7 +172,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/elektricien-zeewolde">
+    <a class="job" href="/vacature/elektricien-zeewolde" data-provincie="flevoland" data-vakgebied="techniek" data-zoek="elektricien zeewolde flevoland elektrotechniek en energie elektrotechnisch bedrijf in zeewolde techniek en installatie zeewolde elektrotechniek en energie loondienst fulltime werkbus tot € 4.500 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
       <span class="job-body">
         <h3>Elektricien</h3>
@@ -173,7 +181,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/ergotherapeut-veluwe">
+    <a class="job" href="/vacature/ergotherapeut-veluwe" data-provincie="gelderland" data-vakgebied="zorg" data-zoek="ergotherapeut nijkerk gelderland ergotherapie praktijk voor ergotherapie op de veluwe zorg nijkerk en veluwe ergotherapie loondienst 20 tot 36 uur per week tot € 5.084 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
       <span class="job-body">
         <h3>Ergotherapeut</h3>
@@ -182,7 +190,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/financieel-administratief-medewerker-steenbergen">
+    <a class="job" href="/vacature/financieel-administratief-medewerker-steenbergen" data-provincie="noord-brabant" data-vakgebied="engineering" data-zoek="financieel administratief medewerker steenbergen noord-brabant machinebouw machinebouwer in steenbergen kantoor en engineering steenbergen machinebouw loondienst fulltime tot € 3.700 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg></span>
       <span class="job-body">
         <h3>Financieel administratief medewerker</h3>
@@ -191,7 +199,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/floormanager-ermelo">
+    <a class="job" href="/vacature/floormanager-ermelo" data-provincie="gelderland" data-vakgebied="horeca" data-zoek="floormanager ermelo gelderland horeca aziatisch restaurant in ermelo horeca en winkel ermelo horeca loondienst 24 tot 38 uur per week hoge fooi">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M5 3h14l-1 7a6 6 0 0 1-12 0z"/></svg></span>
       <span class="job-body">
         <h3>Floormanager</h3>
@@ -200,7 +208,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/fysiotherapeut-zoetermeer">
+    <a class="job" href="/vacature/fysiotherapeut-zoetermeer" data-provincie="zuid-holland" data-vakgebied="zorg" data-zoek="fysiotherapeut zoetermeer zuid-holland fysiotherapie fysiotherapiepraktijk in zoetermeer zorg zoetermeer fysiotherapie loondienst vanaf 32 uur per week opleidingen vergoed">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
       <span class="job-body">
         <h3>Fysiotherapeut</h3>
@@ -209,7 +217,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/hovenier-haaksbergen">
+    <a class="job" href="/vacature/hovenier-haaksbergen" data-provincie="overijssel" data-vakgebied="groen" data-zoek="hovenier haaksbergen overijssel hoveniers hoveniersbedrijf in haaksbergen groen en tuinbouw haaksbergen hoveniers loondienst fulltime, parttime bespreekbaar tot € 4.000 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-10 16-10 0 9-4 16-10 16"/><path d="M4 21c4-6 8-9 12-11"/></svg></span>
       <span class="job-body">
         <h3>Hovenier</h3>
@@ -218,7 +226,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/installatiemonteur-leidingsystemen-amersfoort">
+    <a class="job" href="/vacature/installatiemonteur-leidingsystemen-amersfoort" data-provincie="utrecht" data-vakgebied="techniek" data-zoek="installatiemonteur leidingsystemen amersfoort utrecht installatietechniek installatiebedrijf in amersfoort techniek en installatie amersfoort installatietechniek loondienst fulltime of 4 dagen opleiding inbegrepen">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h8a4 4 0 0 1 4 4v10"/><path d="M3 11h8"/><path d="M11 21h8"/><path d="M15 3v4"/></svg></span>
       <span class="job-body">
         <h3>Installatiemonteur leidingsystemen</h3>
@@ -227,7 +235,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/kapitein-binnenvaart">
+    <a class="job" href="/vacature/kapitein-binnenvaart" data-provincie="*" data-vakgebied="auto" data-zoek="kapitein binnenvaart heel nederland  binnenvaart binnenvaartbedrijf auto, transport en vervoer heel nederland binnenvaart loondienst, zzp kan ook 14 dagen op, 14 dagen af nederlandse arbeidsvoorwaarden">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/><path d="M4 17l-1-5h18l-2 5"/><path d="M12 12V4"/><path d="M8 12V8h8v4"/></svg></span>
       <span class="job-body">
         <h3>Kapitein binnenvaart</h3>
@@ -236,7 +244,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/liftmonteur-amsterdam">
+    <a class="job" href="/vacature/liftmonteur-amsterdam" data-provincie="noord-holland" data-vakgebied="techniek" data-zoek="liftmonteur ombouw en onderhoud amsterdam noord-holland liftentechniek liftenbedrijf in amsterdam techniek en installatie amsterdam liftentechniek loondienst 32 tot 40 uur per week bedrijfsauto tot € 3.900 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 9l3-3 3 3"/><path d="M9 15l3 3 3-3"/></svg></span>
       <span class="job-body">
         <h3>Liftmonteur ombouw en onderhoud</h3>
@@ -245,7 +253,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/luchtkanalenmonteur-amsterdam">
+    <a class="job" href="/vacature/luchtkanalenmonteur-amsterdam" data-provincie="noord-holland" data-vakgebied="techniek" data-zoek="luchtkanalenmonteur amsterdam noord-holland luchttechniek montagebedrijf in luchtkanalen in amsterdam techniek en installatie amsterdam luchttechniek loondienst fulltime bus van de zaak">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M7 7v10"/><path d="M17 7v10"/></svg></span>
       <span class="job-body">
         <h3>Luchtkanalenmonteur</h3>
@@ -254,7 +262,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/machinist-bulkhandling-nieuw-vennep">
+    <a class="job" href="/vacature/machinist-bulkhandling-nieuw-vennep" data-provincie="noord-holland" data-vakgebied="logistiek" data-zoek="machinist bulkhandling nieuw-vennep noord-holland op- en overslag bulkoverslagbedrijf in nieuw-vennep logistiek en magazijn nieuw-vennep op- en overslag loondienst fulltime, minder uren bespreekbaar ploegendienst">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5h12"/><path d="M4 5l4-3"/><path d="M14 5v6"/><path d="M12 11h4v3h-4z"/><path d="M2 21h8"/></svg></span>
       <span class="job-body">
         <h3>Machinist bulkhandling</h3>
@@ -263,7 +271,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/magazijnbeheerder-steenbergen">
+    <a class="job" href="/vacature/magazijnbeheerder-steenbergen" data-provincie="noord-brabant" data-vakgebied="logistiek" data-zoek="magazijnbeheerder steenbergen noord-brabant machinebouw machinebouwer in steenbergen logistiek en magazijn steenbergen machinebouw loondienst fulltime tot € 3.700 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></span>
       <span class="job-body">
         <h3>Magazijnbeheerder</h3>
@@ -272,7 +280,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/mechanical-engineer-steenbergen">
+    <a class="job" href="/vacature/mechanical-engineer-steenbergen" data-provincie="noord-brabant" data-vakgebied="engineering" data-zoek="mechanical engineer steenbergen noord-brabant machinebouw machinebouwer in steenbergen kantoor en engineering steenbergen machinebouw loondienst fulltime">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
       <span class="job-body">
         <h3>Mechanical engineer</h3>
@@ -281,7 +289,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/medewerker-bediening-deurne">
+    <a class="job" href="/vacature/medewerker-bediening-deurne" data-provincie="noord-brabant" data-vakgebied="horeca" data-zoek="medewerker bediening deurne noord-brabant horeca horecazaak in deurne horeca en winkel deurne horeca loondienst fulltime of in overleg">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></svg></span>
       <span class="job-body">
         <h3>Medewerker bediening</h3>
@@ -290,7 +298,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/medewerker-technische-dienst-ermelo">
+    <a class="job" href="/vacature/medewerker-technische-dienst-ermelo" data-provincie="gelderland" data-vakgebied="techniek" data-zoek="medewerker technische dienst ermelo gelderland voedingsmiddelenindustrie voedingsmiddelenproducent in ermelo techniek en installatie ermelo voedingsmiddelenindustrie loondienst 40 uur per week tot € 4.000 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
       <span class="job-body">
         <h3>Medewerker technische dienst</h3>
@@ -299,7 +307,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/meewerkend-voorman-glastuinbouw-ijsselmuiden">
+    <a class="job" href="/vacature/meewerkend-voorman-glastuinbouw-ijsselmuiden" data-provincie="overijssel" data-vakgebied="groen" data-zoek="meewerkend voorman glastuinbouw ijsselmuiden overijssel glastuinbouw tuinbouwbedrijf in ijsselmuiden groen en tuinbouw ijsselmuiden (bij kampen) glastuinbouw loondienst 32 tot 38 uur per week tot € 3.600 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg></span>
       <span class="job-body">
         <h3>Meewerkend voorman glastuinbouw</h3>
@@ -308,7 +316,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/panelenbouwer-steenbergen">
+    <a class="job" href="/vacature/panelenbouwer-steenbergen" data-provincie="noord-brabant" data-vakgebied="techniek" data-zoek="allround panelenbouwer steenbergen noord-brabant elektrotechniek elektrotechnisch bedrijf in steenbergen techniek en installatie steenbergen elektrotechniek loondienst 3 tot 5 dagen per week bus van de zaak € 3.200 tot € 3.800 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
       <span class="job-body">
         <h3>Allround panelenbouwer</h3>
@@ -317,7 +325,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/plaatwerker-alphen-aan-den-rijn">
+    <a class="job" href="/vacature/plaatwerker-alphen-aan-den-rijn" data-provincie="zuid-holland" data-vakgebied="productie" data-zoek="plaatwerker alphen aan den rijn zuid-holland metaalbewerking metaalbewerkingsbedrijf in alphen aan den rijn productie en metaal alphen aan den rijn metaalbewerking loondienst fulltime of in overleg tot € 5.000 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
       <span class="job-body">
         <h3>Plaatwerker</h3>
@@ -326,7 +334,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/plantoetser-barneveld">
+    <a class="job" href="/vacature/plantoetser-barneveld" data-provincie="gelderland" data-vakgebied="bouw" data-zoek="plantoetser barneveld gelderland bouwadvies en kwaliteitsborging adviesbureau in barneveld bouw en infra barneveld bouwadvies loondienst 24 tot 40 uur per week tot € 5.500 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></span>
       <span class="job-body">
         <h3>Plantoetser</h3>
@@ -335,7 +343,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/rijinstructeur-eindhoven">
+    <a class="job" href="/vacature/rijinstructeur-eindhoven" data-provincie="noord-brabant" data-vakgebied="auto" data-zoek="rijinstructeur auto eindhoven noord-brabant rijopleidingen rijschool in eindhoven auto, transport en vervoer eindhoven rijschool loondienst vanaf 36 uur per week auto van de zaak">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 14v7M10 12H3M14 12h7"/></svg></span>
       <span class="job-body">
         <h3>Rijinstructeur auto</h3>
@@ -344,7 +352,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/sales-engineer-elektrotechniek-elst">
+    <a class="job" href="/vacature/sales-engineer-elektrotechniek-elst" data-provincie="gelderland" data-vakgebied="engineering" data-zoek="sales engineer elektrotechniek elst gelderland elektrotechniek en energietransitie installatiebedrijf in elst kantoor en engineering elst (bij arnhem) elektrotechniek loondienst fulltime leaseauto tot € 6.489 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
       <span class="job-body">
         <h3>Sales engineer elektrotechniek</h3>
@@ -353,7 +361,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/sales-engineer-werkendam">
+    <a class="job" href="/vacature/sales-engineer-werkendam" data-provincie="noord-brabant" data-vakgebied="engineering" data-zoek="sales engineer (inside sales) werkendam noord-brabant technische handel technisch handelsbedrijf in werkendam kantoor en engineering werkendam technische handel loondienst 40 uur per week € 3.500 tot € 5.000 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
       <span class="job-body">
         <h3>Sales engineer (inside sales)</h3>
@@ -362,7 +370,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/senior-werkvoorbereider-hoofddorp">
+    <a class="job" href="/vacature/senior-werkvoorbereider-hoofddorp" data-provincie="noord-holland" data-vakgebied="bouw" data-zoek="senior werkvoorbereider nieuwbouw hoofddorp noord-holland woningbouw bouwbedrijf in hoofddorp bouw en infra hoofddorp woningbouw loondienst 40 uur per week auto van de zaak € 5.100 tot € 7.650 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></span>
       <span class="job-body">
         <h3>Senior werkvoorbereider nieuwbouw</h3>
@@ -371,7 +379,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/servicemonteur-brandmeldinstallaties-nieuwegein">
+    <a class="job" href="/vacature/servicemonteur-brandmeldinstallaties-nieuwegein" data-provincie="utrecht" data-vakgebied="techniek" data-zoek="servicemonteur brandmeldinstallaties nieuwegein utrecht brandbeveiliging specialist in brandbeveiliging in nieuwegein techniek en installatie nieuwegein brandbeveiliging loondienst fulltime bus van de zaak tot € 4.800 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
       <span class="job-body">
         <h3>Servicemonteur brandmeldinstallaties</h3>
@@ -380,7 +388,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/servicemonteur-hydrauliek-eindhoven">
+    <a class="job" href="/vacature/servicemonteur-hydrauliek-eindhoven" data-provincie="noord-brabant" data-vakgebied="techniek" data-zoek="servicemonteur hydrauliek eindhoven noord-brabant hydrauliek specialist in hydrauliek in eindhoven techniek en installatie eindhoven hydrauliek loondienst fulltime servicebus van de zaak tot € 4.000 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
       <span class="job-body">
         <h3>Servicemonteur hydrauliek</h3>
@@ -389,7 +397,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/servicemonteur-kozijnen-alkmaar">
+    <a class="job" href="/vacature/servicemonteur-kozijnen-alkmaar" data-provincie="noord-holland" data-vakgebied="techniek" data-zoek="servicemonteur kozijnen alkmaar noord-holland ramen en deuren servicebedrijf voor ramen en deuren in alkmaar techniek en installatie alkmaar ramen en deuren loondienst fulltime, parttime bespreekbaar bus van de zaak tot € 4.375 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18"/><path d="M4 12h16"/></svg></span>
       <span class="job-body">
         <h3>Servicemonteur kozijnen</h3>
@@ -398,7 +406,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/software-engineer-machinebesturing-steenbergen">
+    <a class="job" href="/vacature/software-engineer-machinebesturing-steenbergen" data-provincie="noord-brabant" data-vakgebied="engineering" data-zoek="software engineer machinebesturing steenbergen noord-brabant machinebouw machinebouwer in steenbergen kantoor en engineering steenbergen machinebouw loondienst fulltime € 5.000 tot € 6.500 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></span>
       <span class="job-body">
         <h3>Software engineer machinebesturing</h3>
@@ -407,7 +415,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/storemanager-pizzeria-amsterdam">
+    <a class="job" href="/vacature/storemanager-pizzeria-amsterdam" data-provincie="noord-holland" data-vakgebied="horeca" data-zoek="storemanager pizzeria amsterdam noord-holland fastfood pizzeria met bezorgservice in amsterdam horeca en winkel amsterdam fastfood loondienst fulltime € 2.850 tot € 3.600 bruto per maand + bonus">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></span>
       <span class="job-body">
         <h3>Storemanager pizzeria</h3>
@@ -416,7 +424,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/storemanager-pizzeria-apeldoorn">
+    <a class="job" href="/vacature/storemanager-pizzeria-apeldoorn" data-provincie="gelderland" data-vakgebied="horeca" data-zoek="storemanager pizzeria apeldoorn gelderland fastfood pizzeria met bezorgservice in apeldoorn horeca en winkel apeldoorn fastfood loondienst fulltime € 2.850 tot € 3.600 bruto per maand + bonus">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></span>
       <span class="job-body">
         <h3>Storemanager pizzeria</h3>
@@ -425,7 +433,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/tekenaar-infra-barendrecht">
+    <a class="job" href="/vacature/tekenaar-infra-barendrecht" data-provincie="zuid-holland" data-vakgebied="bouw" data-zoek="tekenaar infra (kabels en leidingen) barendrecht zuid-holland ondergrondse infra infrabedrijf in barendrecht bouw en infra barendrecht ondergrondse infra loondienst 32 tot 40 uur auto van de zaak mogelijk € 3.500 tot € 4.500 bruto per maand">
       <span class="av" style="background:#0E7A55" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
       <span class="job-body">
         <h3>Tekenaar infra (kabels en leidingen)</h3>
@@ -434,7 +442,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/uitvoerder-bouw-geleen">
+    <a class="job" href="/vacature/uitvoerder-bouw-geleen" data-provincie="limburg" data-vakgebied="bouw" data-zoek="uitvoerder bouw (renovatie en verbouw) geleen limburg bouw familiebedrijf in de bouw in geleen bouw en infra geleen bouw loondienst fulltime auto van de zaak tot € 5.400 bruto per maand">
       <span class="av" style="background:#0A2452" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20"/><path d="M4 18v-2a8 8 0 0 1 16 0v2"/><path d="M10 8V5h4v3"/></svg></span>
       <span class="job-body">
         <h3>Uitvoerder bouw (renovatie en verbouw)</h3>
@@ -443,7 +451,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/verreiker-machinist-vessem">
+    <a class="job" href="/vacature/verreiker-machinist-vessem" data-provincie="noord-brabant" data-vakgebied="bouw" data-zoek="verreikermachinist vessem noord-brabant machineverhuur machineverhuurbedrijf in vessem bouw en infra vessem (bij eindhoven) machineverhuur loondienst fulltime tot € 4.000 bruto per maand">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
       <span class="job-body">
         <h3>Verreikermachinist</h3>
@@ -452,7 +460,7 @@
         <span class="btn small">Bekijk en solliciteer</span>
       </span>
     </a>
-    <a class="job" href="/vacature/automonteur-harderwijk">
+    <a class="job" href="/vacature/automonteur-harderwijk" data-provincie="gelderland" data-vakgebied="auto" data-zoek="eerste automonteur harderwijk gelderland autodealer autodealer in harderwijk auto, transport en vervoer harderwijk autodealer loondienst vanaf 32 uur per week">
       <span class="av" style="background:#0448AF" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
       <span class="job-body">
         <h3>Eerste automonteur</h3>
@@ -491,5 +499,6 @@
   <nav aria-label="Footer"><a href="/werkgevers">Voor bedrijven</a><a href="/privacy">Privacy</a></nav>
   <span>Website door <a href="https://maxxmarketing.eu">MaxxMarketing</a></span>
 </div></footer>
+<script src="/js/filters.js?v=20261120e"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     "postcode": "",
     "werkgever": "Autodealer in Harderwijk",
     "sector": "Autodealer",
+    "vakgebied": "auto",
     "dienstverband": "Loondienst",
     "uren_kort": "Vanaf 32 uur",
     "soort": [
@@ -54,6 +55,7 @@
     "postcode": "",
     "werkgever": "Specialist in beveiligingstechniek",
     "sector": "Beveiligingstechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -122,6 +124,7 @@
     "postcode": "",
     "werkgever": "Familiebedrijf in Waddinxveen",
     "sector": "Familiebedrijf",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -186,6 +189,7 @@
     "postcode": "",
     "werkgever": "Hoveniersbedrijf in Harderwijk",
     "sector": "Hoveniers",
+    "vakgebied": "groen",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -254,6 +258,7 @@
     "postcode": "",
     "werkgever": "Kwekerij in Ospel",
     "sector": "Kwekerij",
+    "vakgebied": "groen",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -321,6 +326,7 @@
     "postcode": "",
     "werkgever": "Machinebouwer in Steenbergen",
     "sector": "Machinebouw",
+    "vakgebied": "productie",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, parttime bespreekbaar",
     "soort": [
@@ -386,6 +392,7 @@
     "postcode": "",
     "werkgever": "Familiebedrijf in vastgoedonderhoud in Nijmegen",
     "sector": "Vastgoedonderhoud",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "37 uur",
     "soort": [
@@ -455,6 +462,7 @@
     "postcode": "",
     "werkgever": "Bouwbedrijf in Noord-Scharwoude",
     "sector": "Bouw",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -520,6 +528,7 @@
     "postcode": "",
     "werkgever": "Fietsenwinkel in Oegstgeest",
     "sector": "Fietsenbranche",
+    "vakgebied": "horeca",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (38 uur)",
     "soort": [
@@ -587,6 +596,7 @@
     "postcode": "",
     "werkgever": "Transportbedrijf in Oeffelt",
     "sector": "Transport",
+    "vakgebied": "auto",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -654,6 +664,7 @@
     "postcode": "",
     "werkgever": "Betonbouwbedrijf in Monster",
     "sector": "Betonbouw",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -721,6 +732,7 @@
     "postcode": "",
     "werkgever": "Specialist in besturingssystemen en automatisering in 's-Gravendeel",
     "sector": "Automatisering",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -786,6 +798,7 @@
     "postcode": "",
     "werkgever": "Metaalbewerkingsbedrijf in Someren",
     "sector": "Metaalbewerking",
+    "vakgebied": "productie",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 38 uur",
     "soort": [
@@ -853,6 +866,7 @@
     "postcode": "",
     "werkgever": "Autogarage in Utrecht",
     "sector": "Autogarage",
+    "vakgebied": "auto",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (38 uur)",
     "soort": [
@@ -920,6 +934,7 @@
     "postcode": "",
     "werkgever": "Installatiebedrijf in Den Helder",
     "sector": "Installatietechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 38 uur",
     "soort": [
@@ -991,6 +1006,7 @@
     "postcode": "",
     "werkgever": "Elektrotechnisch bedrijf in Zeewolde",
     "sector": "Elektrotechniek en energie",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -1061,6 +1077,7 @@
     "postcode": "",
     "werkgever": "Praktijk voor ergotherapie op de Veluwe",
     "sector": "Ergotherapie",
+    "vakgebied": "zorg",
     "dienstverband": "Loondienst",
     "uren_kort": "20 tot 36 uur",
     "soort": [
@@ -1133,6 +1150,7 @@
     "postcode": "",
     "werkgever": "Machinebouwer in Steenbergen",
     "sector": "Machinebouw",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -1202,6 +1220,7 @@
     "postcode": "",
     "werkgever": "Aziatisch restaurant in Ermelo",
     "sector": "Horeca",
+    "vakgebied": "horeca",
     "dienstverband": "Loondienst",
     "uren_kort": "24 tot 38 uur",
     "soort": [
@@ -1265,6 +1284,7 @@
     "postcode": "",
     "werkgever": "Fysiotherapiepraktijk in Zoetermeer",
     "sector": "Fysiotherapie",
+    "vakgebied": "zorg",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -1322,6 +1342,7 @@
     "postcode": "",
     "werkgever": "Hoveniersbedrijf in Haaksbergen",
     "sector": "Hoveniers",
+    "vakgebied": "groen",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, parttime bespreekbaar",
     "soort": [
@@ -1388,6 +1409,7 @@
     "postcode": "",
     "werkgever": "Installatiebedrijf in Amersfoort",
     "sector": "Installatietechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime of 4 dagen",
     "soort": [
@@ -1450,6 +1472,7 @@
     "postcode": "",
     "werkgever": "Binnenvaartbedrijf",
     "sector": "Binnenvaart",
+    "vakgebied": "auto",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, 14 dagen op 14 dagen af",
     "soort": [
@@ -1521,6 +1544,7 @@
     "postcode": "",
     "werkgever": "Liftenbedrijf in Amsterdam",
     "sector": "Liftentechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -1592,6 +1616,7 @@
     "postcode": "",
     "werkgever": "Montagebedrijf in luchtkanalen in Amsterdam",
     "sector": "Luchttechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -1652,6 +1677,7 @@
     "postcode": "",
     "werkgever": "Bulkoverslagbedrijf in Nieuw-Vennep",
     "sector": "Op- en overslag",
+    "vakgebied": "logistiek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, minder uren bespreekbaar",
     "soort": [
@@ -1715,6 +1741,7 @@
     "postcode": "",
     "werkgever": "Machinebouwer in Steenbergen",
     "sector": "Machinebouw",
+    "vakgebied": "logistiek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -1777,6 +1804,7 @@
     "postcode": "",
     "werkgever": "Machinebouwer in Steenbergen",
     "sector": "Machinebouw",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -1839,6 +1867,7 @@
     "postcode": "",
     "werkgever": "Horecazaak in Deurne",
     "sector": "Horeca",
+    "vakgebied": "horeca",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, of in overleg",
     "soort": [
@@ -1902,6 +1931,7 @@
     "postcode": "",
     "werkgever": "Voedingsmiddelenproducent in Ermelo",
     "sector": "Voedingsmiddelenindustrie",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "40 uur",
     "soort": [
@@ -1969,6 +1999,7 @@
     "postcode": "",
     "werkgever": "Tuinbouwbedrijf in IJsselmuiden",
     "sector": "Glastuinbouw",
+    "vakgebied": "groen",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 38 uur",
     "soort": [
@@ -2035,6 +2066,7 @@
     "postcode": "",
     "werkgever": "Elektrotechnisch bedrijf in Steenbergen",
     "sector": "Elektrotechniek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "24 tot 40 uur",
     "soort": [
@@ -2102,6 +2134,7 @@
     "postcode": "",
     "werkgever": "Metaalbewerkingsbedrijf in Alphen aan den Rijn",
     "sector": "Metaalbewerking",
+    "vakgebied": "productie",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, of in overleg",
     "soort": [
@@ -2169,6 +2202,7 @@
     "postcode": "",
     "werkgever": "Adviesbureau in Barneveld",
     "sector": "Bouwadvies en kwaliteitsborging",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "24 tot 40 uur",
     "soort": [
@@ -2238,6 +2272,7 @@
     "postcode": "",
     "werkgever": "Rijschool in Eindhoven",
     "sector": "Rijopleidingen",
+    "vakgebied": "auto",
     "dienstverband": "Loondienst",
     "uren_kort": "Vanaf 36 uur",
     "soort": [
@@ -2299,6 +2334,7 @@
     "postcode": "",
     "werkgever": "Installatiebedrijf in Elst",
     "sector": "Elektrotechniek en energietransitie",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -2369,6 +2405,7 @@
     "postcode": "",
     "werkgever": "Technisch handelsbedrijf in Werkendam",
     "sector": "Technische handel",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "40 uur",
     "soort": [
@@ -2435,6 +2472,7 @@
     "postcode": "",
     "werkgever": "Bouwbedrijf in Hoofddorp",
     "sector": "Woningbouw",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "40 uur",
     "soort": [
@@ -2508,6 +2546,7 @@
     "postcode": "",
     "werkgever": "Specialist in brandbeveiliging in Nieuwegein",
     "sector": "Brandbeveiliging",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [
@@ -2579,6 +2618,7 @@
     "postcode": "",
     "werkgever": "Specialist in hydrauliek in Eindhoven",
     "sector": "Hydrauliek",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -2647,6 +2687,7 @@
     "postcode": "",
     "werkgever": "Servicebedrijf voor ramen en deuren in Alkmaar",
     "sector": "Ramen en deuren",
+    "vakgebied": "techniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime, parttime bespreekbaar",
     "soort": [
@@ -2718,6 +2759,7 @@
     "postcode": "",
     "werkgever": "Machinebouwer in Steenbergen",
     "sector": "Machinebouw",
+    "vakgebied": "engineering",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -2790,6 +2832,7 @@
     "postcode": "",
     "werkgever": "Pizzeria met bezorgservice in Amsterdam",
     "sector": "Fastfood",
+    "vakgebied": "horeca",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -2865,6 +2908,7 @@
     "postcode": "",
     "werkgever": "Pizzeria met bezorgservice in Apeldoorn",
     "sector": "Fastfood",
+    "vakgebied": "horeca",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -2941,6 +2985,7 @@
     "postcode": "",
     "werkgever": "Infrabedrijf in Barendrecht",
     "sector": "Ondergrondse infra",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "32 tot 40 uur",
     "soort": [
@@ -3016,6 +3061,7 @@
     "postcode": "",
     "werkgever": "Familiebedrijf in de bouw in Geleen",
     "sector": "Bouw",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime (40 uur)",
     "soort": [
@@ -3086,6 +3132,7 @@
     "postcode": "",
     "werkgever": "Machineverhuurbedrijf in Vessem",
     "sector": "Machineverhuur",
+    "vakgebied": "bouw",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
     "soort": [

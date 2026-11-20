@@ -26,8 +26,22 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://jobbord.nl"
-CSS_V = "20261120d"
+CSS_V = "20261120e"
 VANDAAG = datetime.date.today()
+
+# Vaste vakgebieden voor het filter op de homepage (code -> naam). Elke vacature
+# in data/vacatures.json heeft "vakgebied" met een van deze codes.
+VAKGEBIEDEN = {
+    "techniek": "Techniek en installatie",
+    "bouw": "Bouw en infra",
+    "auto": "Auto, transport en vervoer",
+    "productie": "Productie en metaal",
+    "logistiek": "Logistiek en magazijn",
+    "engineering": "Kantoor en engineering",
+    "groen": "Groen en tuinbouw",
+    "horeca": "Horeca en winkel",
+    "zorg": "Zorg",
+}
 
 e = html.escape
 
@@ -42,6 +56,8 @@ def lees():
         if v["code"] in codes:
             sys.exit(f"Dubbele code: {v['code']}")
         codes.add(v["code"])
+        if v.get("vakgebied") not in VAKGEBIEDEN:
+            sys.exit(f"{v['code']}: vakgebied {v.get('vakgebied')!r} onbekend, kies uit {', '.join(VAKGEBIEDEN)}")
         if datetime.date.fromisoformat(v["geldig_tot"]) < VANDAAG:
             print(f"  verlopen, niet gepubliceerd: {v['code']} (geldig_tot {v['geldig_tot']})")
             continue
@@ -209,8 +225,14 @@ PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
 KLOK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
 
 
+def slug(t):
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
 def kaart(v):
-    return f"""    <a class="job" href="/vacature/{v['code']}">
+    zoek = " ".join([v["titel"], v["plaats"], v.get("regio", ""), v["sector"], v["werkgever"], VAKGEBIEDEN[v["vakgebied"]], " ".join(v["meta"])]).lower()
+    regio = slug(v["regio"]) if v.get("regio") else "*"
+    return f"""    <a class="job" href="/vacature/{v['code']}" data-provincie="{regio}" data-vakgebied="{v['vakgebied']}" data-zoek="{e(zoek)}">
       <span class="av" style="background:{v['kleur']}" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{v['icoon']}</svg></span>
       <span class="job-body">
         <h3>{e(v['titel'])}</h3>
@@ -220,6 +242,27 @@ def kaart(v):
       </span>
     </a>
 """
+
+
+def filters(vacatures):
+    """Zoekveld en keuzelijsten boven de vacatures, met aantallen."""
+    provincies = {}
+    for v in vacatures:
+        if v.get("regio"):
+            provincies[v["regio"]] = provincies.get(v["regio"], 0) + 1
+    landelijk = sum(1 for v in vacatures if not v.get("regio"))
+    vak = {}
+    for v in vacatures:
+        vak[v["vakgebied"]] = vak.get(v["vakgebied"], 0) + 1
+    opt_p = "".join(f'<option value="{slug(p)}">{e(p)} ({n + landelijk})</option>' for p, n in sorted(provincies.items()))
+    opt_v = "".join(f'<option value="{k}">{e(naam)} ({vak[k]})</option>' for k, naam in VAKGEBIEDEN.items() if k in vak)
+    return f"""  <form class="filters" id="filters" role="search" action="/" method="get">
+    <label class="f-zoek"><span class="sr">Zoek op functie of trefwoord</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" name="q" placeholder="Functie of trefwoord, bijvoorbeeld monteur" autocomplete="off"></label>
+    <label><span class="sr">Provincie</span><select name="provincie"><option value="">Alle provincies</option>{opt_p}</select></label>
+    <label><span class="sr">Vakgebied</span><select name="vakgebied"><option value="">Alle vakgebieden</option>{opt_v}</select></label>
+  </form>
+  <p class="f-aantal" id="f-aantal" aria-live="polite">{len(vacatures)} vacatures</p>
+  <div class="f-leeg" id="f-leeg" hidden><p>Geen vacatures gevonden met deze filters.</p><button type="button" class="btn ghost small" id="f-wis">Wis filters</button></div>"""
 
 
 def main():
@@ -240,6 +283,10 @@ def main():
                    lambda m: m.group(1) + "".join(kaart(v) for v in vacatures).rstrip("\n") + m.group(2), s, flags=re.S)
     if n != 1:
         sys.exit("index.html: markeringen <!-- vacatures:start --> / <!-- vacatures:end --> niet gevonden")
+    s, n = re.subn(r"(<!-- filters:start -->\n).*?(\s*<!-- filters:end -->)",
+                   lambda m: m.group(1) + filters(vacatures) + m.group(2), s, flags=re.S)
+    if n != 1:
+        sys.exit("index.html: markeringen <!-- filters:start --> / <!-- filters:end --> niet gevonden")
     idx.write_text(s)
 
     urls = [(SITE + "/", VANDAAG.isoformat()), (SITE + "/werkgevers", VANDAAG.isoformat())] + [(f"{SITE}/vacature/{v['code']}", v["geplaatst"]) for v in vacatures]

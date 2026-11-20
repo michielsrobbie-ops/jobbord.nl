@@ -28,6 +28,10 @@ python3 build/build.py
 
 Dat maakt `vacature/<code>.html` (met Google for Jobs-gegevens), de kaarten op `index.html`, `sitemap.xml`, `robots.txt` en `api/_vacatures.json`. Daarna pushen.
 
+Elke vacature heeft een `vakgebied` (voor het filter op de homepage): `techniek`, `bouw`, `auto`, `productie`, `logistiek`, `engineering`, `groen`, `horeca` of `zorg`. De lijst staat in `VAKGEBIEDEN` in `build/build.py`.
+
+Filters zijn ook als link te gebruiken, bijvoorbeeld `jobbord.nl/?vakgebied=groen`, `?provincie=noord-brabant` of `?q=monteur`.
+
 Welke klant en functie bij een code hoort, staat alleen in het portaal: `JOBBORD_VACATURES` op Railway, als `"code":"Klant | Functie"` (functie exact zoals in het portaal).
 
 ## Lokaal bekijken
