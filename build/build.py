@@ -189,7 +189,7 @@ def pagina(v):
 {keuzes}
         </div>
       </fieldset>
-      <label class="consent"><input type="checkbox" name="andere"> <span>Je mag me ook benaderen voor andere vacatures. Bewaar mijn gegevens daarvoor 2 jaar.</span></label>
+      <label class="consent"><input type="checkbox" name="andere"> <span>Ik wil ook gebeld worden over andere vacatures die bij me passen. Bewaar mijn gegevens daarvoor 2 jaar.</span></label>
       <p class="err" id="a-err" role="alert" hidden></p>
       <button class="btn" type="submit">Verstuur sollicitatie</button>
       <p class="fine">Je gegevens gaan naar het bedrijf achter deze vacature. Lees de <a href="/privacy">privacyverklaring</a>.</p>
