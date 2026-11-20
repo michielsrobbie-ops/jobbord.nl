@@ -3189,5 +3189,49 @@
       "Een beetje",
       "Nee"
     ]
+  },
+  {
+    "code": "test",
+    "verborgen": true,
+    "titel": "Testvacature",
+    "plaats": "Testplaats",
+    "regio": "Utrecht",
+    "postcode": "",
+    "werkgever": "Test",
+    "sector": "Test",
+    "vakgebied": "techniek",
+    "dienstverband": "Loondienst",
+    "uren_kort": "Fulltime",
+    "soort": [
+      "FULL_TIME"
+    ],
+    "salaris": null,
+    "geplaatst": "2026-11-20",
+    "geldig_tot": "2099-12-31",
+    "seo_titel": "Testvacature (niet echt)",
+    "seo_omschrijving": "Interne testpagina van jobbord.nl. Geen echte vacature.",
+    "deel_omschrijving": "Interne testpagina. Geen echte vacature.",
+    "meta": [
+      "Test",
+      "Geen echte vacature"
+    ],
+    "kleur": "#64748B",
+    "icoon": "<circle cx=\"12\" cy=\"12\" r=\"8\"/>",
+    "functie": [
+      "Dit is een testvacature om het sollicitatieformulier te testen. Een sollicitatie hierop komt in het portaal binnen als 'niet gekoppeld', zodat geen klant hem ziet.",
+      "Deze pagina staat niet op de homepage en niet in Google."
+    ],
+    "taken": [],
+    "eisen": [
+      "Gebruik als naam: test"
+    ],
+    "aanbod_titel": "Wat krijg je",
+    "aanbod": [],
+    "aanbod_tekst": "Niets, het is een test.",
+    "vraag": "Is dit een test?",
+    "opties": [
+      "Ja",
+      "Nee"
+    ]
   }
 ]

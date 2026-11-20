@@ -11,6 +11,7 @@ Maakt of vernieuwt:
   api/_vacatures.json    de codes die /api/solliciteer accepteert
 
 Vacature erbij: voeg een blok toe aan data/vacatures.json, draai dit script, push.
+Testvacature: "verborgen": true -> pagina bestaat (noindex), maar niet op de homepage, in de sitemap of in Google for Jobs.
 Vacature stoppen: haal het blok weg (of zet "geldig_tot" in het verleden), draai dit script, push.
 De pagina verdwijnt dan, net als de kaart en de regel in de sitemap.
 
@@ -143,9 +144,7 @@ def kop(v, url):
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{jobposting(v)}
-</script>
+{'<meta name="robots" content="noindex, nofollow">' if v.get("verborgen") else '<script type="application/ld+json">' + chr(10) + jobposting(v) + chr(10) + '</script>'}
 <script type="application/ld+json">
 {json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Vacatures", "item": SITE + "/"},
@@ -266,15 +265,16 @@ def filters(vacatures):
 
 
 def main():
-    vacatures = lees()
+    alle = lees()
+    vacatures = [v for v in alle if not v.get("verborgen")]
     map_ = ROOT / "vacature"
     map_.mkdir(exist_ok=True)
-    gewenst = {f"{v['code']}.html" for v in vacatures}
+    gewenst = {f"{v['code']}.html" for v in alle}
     for oud in map_.glob("*.html"):
         if oud.name not in gewenst:
             oud.unlink()
             print(f"  weggehaald: vacature/{oud.name}")
-    for v in vacatures:
+    for v in alle:
         (map_ / f"{v['code']}.html").write_text(pagina(v))
 
     idx = ROOT / "index.html"
@@ -295,7 +295,7 @@ def main():
         + "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls)
         + "</urlset>\n")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nDisallow: /demo/\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\n")
-    (ROOT / "api/_vacatures.json").write_text(json.dumps(sorted(v["code"] for v in vacatures), indent=1) + "\n")
+    (ROOT / "api/_vacatures.json").write_text(json.dumps(sorted(v["code"] for v in alle), indent=1) + "\n")
     print(f"Klaar: {len(vacatures)} vacatures.")
 
 
