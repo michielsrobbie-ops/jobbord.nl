@@ -9,14 +9,22 @@
     "sector": "Autodealer",
     "dienstverband": "Loondienst",
     "uren_kort": "Vanaf 32 uur",
-    "soort": ["FULL_TIME", "PART_TIME"],
+    "soort": [
+      "FULL_TIME",
+      "PART_TIME"
+    ],
     "salaris": null,
     "geplaatst": "2026-11-19",
     "geldig_tot": "2027-01-31",
     "seo_titel": "Vacature eerste automonteur Harderwijk",
-    "seo_omschrijving": "Vacature eerste automonteur bij een autodealer in Harderwijk. Loondienst, vanaf 32 uur per week. Solliciteren duurt een minuut, een cv is niet nodig.",
+    "seo_omschrijving": "Vacature eerste automonteur bij een autodealer in Harderwijk. Loondienst, vanaf 32 uur per week. Solliciteer direct met je cv.",
     "deel_omschrijving": "Loondienst, vanaf 32 uur. Solliciteren duurt een minuut.",
-    "meta": ["Harderwijk", "Autodealer", "Loondienst", "Vanaf 32 uur per week"],
+    "meta": [
+      "Harderwijk",
+      "Autodealer",
+      "Loondienst",
+      "Vanaf 32 uur per week"
+    ],
     "kleur": "#0448AF",
     "icoon": "<path d=\"M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z\"/>",
     "functie": [
@@ -32,7 +40,11 @@
     "aanbod": [],
     "aanbod_tekst": "Die bespreek je in het eerste gesprek met het bedrijf.",
     "vraag": "Heb je werkervaring als automonteur?",
-    "opties": ["Ja", "Nog niet, ik zit in een opleiding", "Nee"]
+    "opties": [
+      "Ja",
+      "Nog niet, ik zit in een opleiding",
+      "Nee"
+    ]
   },
   {
     "code": "servicetechnicus-brandmeldinstallaties-prinsenbeek",
@@ -44,14 +56,26 @@
     "sector": "Beveiligingstechniek",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
-    "soort": ["FULL_TIME"],
-    "salaris": { "max": 5000, "per": "MONTH" },
+    "soort": [
+      "FULL_TIME"
+    ],
+    "salaris": {
+      "max": 5000,
+      "per": "MONTH"
+    },
     "geplaatst": "2026-11-20",
     "geldig_tot": "2027-01-31",
     "seo_titel": "Vacature servicetechnicus brandmeldinstallaties Prinsenbeek (Breda)",
     "seo_omschrijving": "Servicetechnicus of onderhoudsmonteur brandmeld- en ontruimingsinstallaties (BMI/OAI) in Prinsenbeek bij Breda. Fulltime, auto van de zaak, tot € 5.000 bruto per maand.",
     "deel_omschrijving": "Fulltime, auto van de zaak, tot € 5.000 bruto per maand. Solliciteren duurt een minuut.",
-    "meta": ["Prinsenbeek (bij Breda)", "Beveiligingstechniek", "Loondienst, zzp kan ook", "Fulltime", "Auto van de zaak", "Tot € 5.000 bruto per maand"],
+    "meta": [
+      "Prinsenbeek (bij Breda)",
+      "Beveiligingstechniek",
+      "Loondienst, zzp kan ook",
+      "Fulltime",
+      "Auto van de zaak",
+      "Tot € 5.000 bruto per maand"
+    ],
     "kleur": "#0A2452",
     "icoon": "<path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"/><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"/>",
     "functie": [
@@ -84,7 +108,11 @@
     ],
     "aanbod_tekst": "",
     "vraag": "Heb je ervaring met brandmeldinstallaties?",
-    "opties": ["Ja", "Een beetje, ik heb de opleiding installatiedeskundige", "Nee"]
+    "opties": [
+      "Ja",
+      "Een beetje, ik heb de opleiding installatiedeskundige",
+      "Nee"
+    ]
   },
   {
     "code": "grondwerker-waddinxveen",
@@ -96,14 +124,22 @@
     "sector": "Familiebedrijf",
     "dienstverband": "Loondienst",
     "uren_kort": "Fulltime",
-    "soort": ["FULL_TIME"],
+    "soort": [
+      "FULL_TIME"
+    ],
     "salaris": null,
     "geplaatst": "2026-11-20",
     "geldig_tot": "2027-01-31",
     "seo_titel": "Vacature grondwerker / stratenmaker Waddinxveen",
-    "seo_omschrijving": "Ervaren grondwerker of stratenmaker gezocht in Waddinxveen (bij Gouda). Afwisselend buitenwerk door heel Nederland, fulltime, bus van de zaak. Solliciteren zonder cv.",
+    "seo_omschrijving": "Ervaren grondwerker of stratenmaker gezocht in Waddinxveen (bij Gouda). Afwisselend buitenwerk door heel Nederland, fulltime, bus van de zaak. Solliciteer direct met je cv.",
     "deel_omschrijving": "Fulltime, bus van de zaak, afwisselend buitenwerk door heel Nederland. Solliciteren duurt een minuut.",
-    "meta": ["Waddinxveen (bij Gouda)", "Familiebedrijf", "Loondienst", "Fulltime", "Bus van de zaak"],
+    "meta": [
+      "Waddinxveen (bij Gouda)",
+      "Familiebedrijf",
+      "Loondienst",
+      "Fulltime",
+      "Bus van de zaak"
+    ],
     "kleur": "#0E7A55",
     "icoon": "<path d=\"M14 4l6 6\"/><path d=\"M17 7l-9.5 9.5\"/><path d=\"M4 20l3.5-3.5 2 2L6 22z\"/>",
     "functie": [
@@ -136,6 +172,10 @@
     ],
     "aanbod_tekst": "",
     "vraag": "Heb je werkervaring als grondwerker of stratenmaker?",
-    "opties": ["Ja", "Een beetje", "Nee"]
+    "opties": [
+      "Ja",
+      "Een beetje",
+      "Nee"
+    ]
   }
 ]

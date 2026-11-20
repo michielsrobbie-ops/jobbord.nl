@@ -26,7 +26,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://jobbord.nl"
-CSS_V = "20261120"
+CSS_V = "20261120b"
 VANDAAG = datetime.date.today()
 
 e = html.escape
@@ -176,12 +176,13 @@ def pagina(v):
   <aside class="vac-form">
     <form class="apply" id="solliciteer" data-vacature="{v['code']}" novalidate>
       <h2>Solliciteer in een minuut</h2>
-      <p class="hint">Een cv is niet nodig.</p>
+      <p class="hint">Met je cv, je naam en je telefoonnummer.</p>
       <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="field"><label for="a-naam">Naam</label><input type="text" id="a-naam" name="naam" autocomplete="name"></div>
       <div class="field"><label for="a-tel">Telefoonnummer</label><input type="tel" id="a-tel" name="telefoon" autocomplete="tel" inputmode="tel" placeholder="06 12345678"></div>
       <div class="field"><label for="a-mail">E-mailadres <span class="opt">(hoeft niet)</span></label><input type="email" id="a-mail" name="email" autocomplete="email"></div>
       <div class="field"><label for="a-plaats">Woonplaats</label><input type="text" id="a-plaats" name="woonplaats" autocomplete="address-level2"></div>
+      <div class="field"><label for="a-cv">Je cv</label><input type="file" id="a-cv" name="cv" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,application/pdf,image/*"><small>Pdf, Word of een foto van je cv. Maximaal 3 MB.</small></div>
       <fieldset class="field">
         <legend class="lbl">{e(v['vraag'])}</legend>
         <div class="choices" data-vraag="{e(v['vraag'])}">

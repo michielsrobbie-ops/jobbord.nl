@@ -12,6 +12,19 @@ const VACATURES = new Set(require('./_vacatures.json'));
 
 const kort = (s, n) => String(s == null ? '' : s).trim().slice(0, n);
 
+// CV: verplicht, pdf, Word of foto, max 3 MB (Vercel neemt maximaal 4,5 MB per verzoek aan).
+const CV_EXTS = ['.pdf', '.doc', '.docx', '.png', '.jpg', '.jpeg'];
+const CV_MAX = 3 * 1024 * 1024;
+function leesCv(cv) {
+  if (!cv || typeof cv.naam !== 'string' || typeof cv.data !== 'string') return null;
+  const naam = kort(cv.naam, 120);
+  const ext = (naam.match(/\.[a-z0-9]+$/i) || [''])[0].toLowerCase();
+  if (!CV_EXTS.includes(ext)) return null;
+  const bytes = Math.floor(cv.data.length * 3 / 4);
+  if (!bytes || bytes > CV_MAX + 4) return null;
+  return { naam, data: cv.data };
+}
+
 // Eenvoudige rem per IP-adres (per serverinstantie).
 const recent = new Map();
 function teVaak(ip) {
@@ -38,6 +51,8 @@ module.exports = async (req, res) => {
   if (!VACATURES.has(code) || naam.length < 2 || telefoon.replace(/\D/g, '').length < 9) {
     return res.status(400).json({ error: 'ongeldig' });
   }
+  const cv = leesCv(b.cv);
+  if (!cv) return res.status(400).json({ error: 'cv' });
 
   const portaal = String(process.env.PORTAL_URL || '').replace(/\/+$/, '');
   const secret = String(process.env.JOBBORD_SECRET || '');
@@ -51,6 +66,7 @@ module.exports = async (req, res) => {
     woonplaats: kort(b.woonplaats, 80),
     antwoorden: (Array.isArray(b.antwoorden) ? b.antwoorden : []).slice(0, 10).map((a) => ({ vraag: kort(a && a.vraag, 200), antwoord: kort(a && a.antwoord, 200) })),
     utm: kort(b.herkomst, 300),
+    cv,
   });
   const ts = String(Date.now());
   const handtekening = 'sha256=' + crypto.createHmac('sha256', secret).update(`${ts}.`).update(bericht).digest('hex');

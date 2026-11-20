@@ -22,6 +22,11 @@
     if (f.naam.value.trim().length < 2) { mist.push('je naam'); eerste = eerste || f.naam; }
     if (f.telefoon.value.replace(/\D/g, '').length < 9) { mist.push('een telefoonnummer'); eerste = eerste || f.telefoon; }
     if (f.woonplaats.value.trim().length < 2) { mist.push('je woonplaats'); eerste = eerste || f.woonplaats; }
+    const cvBestand = f.cv && f.cv.files[0];
+    const cvExt = cvBestand ? (cvBestand.name.match(/\.[a-z0-9]+$/i) || [''])[0].toLowerCase() : '';
+    if (!cvBestand) { mist.push('je cv'); eerste = eerste || f.cv; }
+    else if (!['.pdf', '.doc', '.docx', '.png', '.jpg', '.jpeg'].includes(cvExt)) { err.textContent = 'Je cv moet een pdf, Word-bestand of foto (jpg of png) zijn.'; err.hidden = false; f.cv.focus(); return; }
+    else if (cvBestand.size > 3 * 1024 * 1024) { err.textContent = 'Je cv is groter dan 3 MB. Maak er een pdf van of stuur een kleinere foto.'; err.hidden = false; f.cv.focus(); return; }
     const open = groepen.find((g) => !g.querySelector('input:checked'));
     if (open) { mist.push('een antwoord op de vraag'); eerste = eerste || open.querySelector('input'); }
     if (mist.length) { err.textContent = 'Vul nog in: ' + mist.join(', ') + '.'; err.hidden = false; eerste.focus(); return; }
@@ -29,6 +34,12 @@
     const knop = f.querySelector('button[type=submit]');
     knop.disabled = true; knop.textContent = 'Bezig met versturen…';
     try {
+      const cvData = await new Promise((ok, fout) => {
+        const lezer = new FileReader();
+        lezer.onload = () => ok(String(lezer.result).split(',')[1] || '');
+        lezer.onerror = () => fout(lezer.error);
+        lezer.readAsDataURL(cvBestand);
+      });
       const r = await fetch('/api/solliciteer', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -37,6 +48,7 @@
           naam: f.naam.value, telefoon: f.telefoon.value, email: f.email.value, woonplaats: f.woonplaats.value,
           antwoorden: groepen.map((g) => ({ vraag: g.dataset.vraag, antwoord: g.querySelector('input:checked').value })),
           website: f.website.value, duur_ms: Date.now() - gestart, herkomst,
+          cv: { naam: cvBestand.name, data: cvData },
         }),
       });
       if (!r.ok) throw new Error(String(r.status));
