@@ -68,7 +68,12 @@ def omschrijving_html(v):
 def jobposting(v):
     """Gestructureerde gegevens voor Google for Jobs.
     https://developers.google.com/search/docs/appearance/structured-data/job-posting"""
-    adres = {"@type": "PostalAddress", "addressLocality": v["plaats"], "addressRegion": v["regio"], "addressCountry": "NL"}
+    # "geen_plaats": de baan heeft geen vaste standplaats (bv. varen, of alleen een regio bekend).
+    adres = {"@type": "PostalAddress", "addressCountry": "NL"}
+    if not v.get("geen_plaats"):
+        adres["addressLocality"] = v["plaats"]
+    if v.get("regio"):
+        adres["addressRegion"] = v["regio"]
     if v.get("postcode"):
         adres["postalCode"] = v["postcode"]
     d = {
