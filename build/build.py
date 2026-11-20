@@ -26,7 +26,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://jobbord.nl"
-CSS_V = "20261120b"
+CSS_V = "20261120c"
 VANDAAG = datetime.date.today()
 
 e = html.escape
@@ -143,7 +143,7 @@ def kop(v, url):
 
 VOET = f"""<footer><div class="wrap">
   <span class="foot-brand"><img src="/img/logo.png" alt="jobbord.nl" width="150" height="28">© 2026</span>
-  <nav aria-label="Footer"><a href="/">Vacatures</a><a href="/privacy">Privacy</a></nav>
+  <nav aria-label="Footer"><a href="/">Vacatures</a><a href="/werkgevers">Voor bedrijven</a><a href="/privacy">Privacy</a></nav>
   <span>Website door <a href="https://maxxmarketing.eu">MaxxMarketing</a></span>
 </div></footer>
 <script src="/js/solliciteer.js?v={CSS_V}"></script>
@@ -236,7 +236,7 @@ def main():
         sys.exit("index.html: markeringen <!-- vacatures:start --> / <!-- vacatures:end --> niet gevonden")
     idx.write_text(s)
 
-    urls = [(SITE + "/", VANDAAG.isoformat())] + [(f"{SITE}/vacature/{v['code']}", v["geplaatst"]) for v in vacatures]
+    urls = [(SITE + "/", VANDAAG.isoformat()), (SITE + "/werkgevers", VANDAAG.isoformat())] + [(f"{SITE}/vacature/{v['code']}", v["geplaatst"]) for v in vacatures]
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls)
