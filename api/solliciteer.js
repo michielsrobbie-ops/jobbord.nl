@@ -8,7 +8,11 @@
 const crypto = require('crypto');
 
 // Alleen deze vacaturecodes worden geaccepteerd.
-const VACATURES = new Set(['automonteur-harderwijk']);
+const VACATURES = new Set([
+  'automonteur-harderwijk',
+  'servicetechnicus-brandmeldinstallaties-prinsenbeek',
+  'grondwerker-waddinxveen',
+]);
 
 const kort = (s, n) => String(s == null ? '' : s).trim().slice(0, n);
 
