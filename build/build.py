@@ -26,7 +26,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://jobbord.nl"
-CSS_V = "20261120c"
+CSS_V = "20261120d"
 VANDAAG = datetime.date.today()
 
 e = html.escape
@@ -189,6 +189,7 @@ def pagina(v):
 {keuzes}
         </div>
       </fieldset>
+      <label class="consent"><input type="checkbox" name="andere"> <span>Je mag me ook benaderen voor andere vacatures. Bewaar mijn gegevens daarvoor 2 jaar.</span></label>
       <p class="err" id="a-err" role="alert" hidden></p>
       <button class="btn" type="submit">Verstuur sollicitatie</button>
       <p class="fine">Je gegevens gaan naar het bedrijf achter deze vacature. Lees de <a href="/privacy">privacyverklaring</a>.</p>

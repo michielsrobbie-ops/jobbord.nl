@@ -46,7 +46,8 @@
         body: JSON.stringify({
           vacature_code: f.dataset.vacature,
           naam: f.naam.value, telefoon: f.telefoon.value, email: f.email.value, woonplaats: f.woonplaats.value,
-          antwoorden: groepen.map((g) => ({ vraag: g.dataset.vraag, antwoord: g.querySelector('input:checked').value })),
+          antwoorden: groepen.map((g) => ({ vraag: g.dataset.vraag, antwoord: g.querySelector('input:checked').value }))
+            .concat([{ vraag: 'Toestemming andere vacatures (2 jaar bewaren)', antwoord: f.andere && f.andere.checked ? 'Ja' : 'Nee' }]),
           website: f.website.value, duur_ms: Date.now() - gestart, herkomst,
           cv: { naam: cvBestand.name, data: cvData },
         }),
