@@ -1,0 +1,141 @@
+[
+  {
+    "code": "automonteur-harderwijk",
+    "titel": "Eerste automonteur",
+    "plaats": "Harderwijk",
+    "regio": "Gelderland",
+    "postcode": "",
+    "werkgever": "Autodealer in Harderwijk",
+    "sector": "Autodealer",
+    "dienstverband": "Loondienst",
+    "uren_kort": "Vanaf 32 uur",
+    "soort": ["FULL_TIME", "PART_TIME"],
+    "salaris": null,
+    "geplaatst": "2026-11-19",
+    "geldig_tot": "2027-01-31",
+    "seo_titel": "Vacature eerste automonteur Harderwijk",
+    "seo_omschrijving": "Vacature eerste automonteur bij een autodealer in Harderwijk. Loondienst, vanaf 32 uur per week. Solliciteren duurt een minuut, een cv is niet nodig.",
+    "deel_omschrijving": "Loondienst, vanaf 32 uur. Solliciteren duurt een minuut.",
+    "meta": ["Harderwijk", "Autodealer", "Loondienst", "Vanaf 32 uur per week"],
+    "kleur": "#0448AF",
+    "icoon": "<path d=\"M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z\"/>",
+    "functie": [
+      "Als eerste automonteur ben je de technische kracht in de werkplaats van een autodealer in Harderwijk. Je pakt de lastige klussen op: storingen opsporen, onderhoud en reparaties uitvoeren, en collega-monteurs helpen als ze vastlopen.",
+      "Je werkt in loondienst, minimaal 32 uur per week. Woon je in Harderwijk of in de buurt, bijvoorbeeld in Ermelo, Nunspeet, Zeewolde of Putten? Dan zit je zo op je werk."
+    ],
+    "taken": [],
+    "eisen": [
+      "Werkervaring als automonteur, of je zit nu in een opleiding tot automonteur",
+      "Je kunt minimaal 32 uur per week werken"
+    ],
+    "aanbod_titel": "Salaris en voorwaarden",
+    "aanbod": [],
+    "aanbod_tekst": "Die bespreek je in het eerste gesprek met het bedrijf.",
+    "vraag": "Heb je werkervaring als automonteur?",
+    "opties": ["Ja", "Nog niet, ik zit in een opleiding", "Nee"]
+  },
+  {
+    "code": "servicetechnicus-brandmeldinstallaties-prinsenbeek",
+    "titel": "Servicetechnicus brandmeldinstallaties",
+    "plaats": "Prinsenbeek",
+    "regio": "Noord-Brabant",
+    "postcode": "",
+    "werkgever": "Specialist in beveiligingstechniek",
+    "sector": "Beveiligingstechniek",
+    "dienstverband": "Loondienst",
+    "uren_kort": "Fulltime",
+    "soort": ["FULL_TIME"],
+    "salaris": { "max": 5000, "per": "MONTH" },
+    "geplaatst": "2026-11-20",
+    "geldig_tot": "2027-01-31",
+    "seo_titel": "Vacature servicetechnicus brandmeldinstallaties Prinsenbeek (Breda)",
+    "seo_omschrijving": "Servicetechnicus of onderhoudsmonteur brandmeld- en ontruimingsinstallaties (BMI/OAI) in Prinsenbeek bij Breda. Fulltime, auto van de zaak, tot € 5.000 bruto per maand.",
+    "deel_omschrijving": "Fulltime, auto van de zaak, tot € 5.000 bruto per maand. Solliciteren duurt een minuut.",
+    "meta": ["Prinsenbeek (bij Breda)", "Beveiligingstechniek", "Loondienst, zzp kan ook", "Fulltime", "Auto van de zaak", "Tot € 5.000 bruto per maand"],
+    "kleur": "#0A2452",
+    "icoon": "<path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"/><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"/>",
+    "functie": [
+      "Als servicetechnicus brandmeldinstallaties zorg je ervoor dat brandmeld- en ontruimingsinstallaties (BMI en OAI) betrouwbaar en veilig werken. Zelfstandig voer je onderhoud, inspecties en storingsherstel uit. Je signaleert afwijkingen, rapporteert je werk en adviseert klanten over verbeteringen.",
+      "Je werkt bij een klein, specialistisch bedrijf in beveiligingstechniek in Prinsenbeek, vlak bij Breda. Geen dag is hetzelfde: je bent op verschillende locaties, vooral in het midden en zuiden van Nederland, en werkt aan uiteenlopende installaties."
+    ],
+    "taken": [
+      "Onderhoud en inspecties van brandmeld- en ontruimingsinstallaties",
+      "Storingen opsporen en verhelpen",
+      "Rapporteren wat je hebt gedaan en gezien",
+      "Klanten adviseren over verbeteringen"
+    ],
+    "eisen": [
+      "Je hebt de opleiding installatiedeskundige gevolgd en wilt doorgroeien naar onderhoudsdeskundige brandmeld- en ontruimingsinstallaties",
+      "Je hebt minimaal één productcursus gevolgd bij Siemens, Esser, Hertek of Notifier",
+      "Je kent de normen een beetje: NEN 2535, NEN 2575 en NEN 2654",
+      "Je kunt op hoogte werken",
+      "Je spreekt en schrijft goed Nederlands",
+      "Je werkt zelfstandig, nauwkeurig en klantgericht",
+      "Rijbewijs B"
+    ],
+    "aanbod_titel": "Wat krijg je",
+    "aanbod": [
+      "Tot € 5.000 bruto per maand, afhankelijk van je ervaring",
+      "Auto van de zaak, laptop en telefoon",
+      "Een klein, hecht team met korte lijnen naar de directeur",
+      "Veel vrijheid in hoe je je werk doet",
+      "Opleidingen op het gebied van brandmelding worden vergoed",
+      "Doorgroeien naar inbedrijfsteller is mogelijk"
+    ],
+    "aanbod_tekst": "",
+    "vraag": "Heb je ervaring met brandmeldinstallaties?",
+    "opties": ["Ja", "Een beetje, ik heb de opleiding installatiedeskundige", "Nee"]
+  },
+  {
+    "code": "grondwerker-waddinxveen",
+    "titel": "Grondwerker",
+    "plaats": "Waddinxveen",
+    "regio": "Zuid-Holland",
+    "postcode": "",
+    "werkgever": "Familiebedrijf in Waddinxveen",
+    "sector": "Familiebedrijf",
+    "dienstverband": "Loondienst",
+    "uren_kort": "Fulltime",
+    "soort": ["FULL_TIME"],
+    "salaris": null,
+    "geplaatst": "2026-11-20",
+    "geldig_tot": "2027-01-31",
+    "seo_titel": "Vacature grondwerker / stratenmaker Waddinxveen",
+    "seo_omschrijving": "Ervaren grondwerker of stratenmaker gezocht in Waddinxveen (bij Gouda). Afwisselend buitenwerk door heel Nederland, fulltime, bus van de zaak. Solliciteren zonder cv.",
+    "deel_omschrijving": "Fulltime, bus van de zaak, afwisselend buitenwerk door heel Nederland. Solliciteren duurt een minuut.",
+    "meta": ["Waddinxveen (bij Gouda)", "Familiebedrijf", "Loondienst", "Fulltime", "Bus van de zaak"],
+    "kleur": "#0E7A55",
+    "icoon": "<path d=\"M14 4l6 6\"/><path d=\"M17 7l-9.5 9.5\"/><path d=\"M4 20l3.5-3.5 2 2L6 22z\"/>",
+    "functie": [
+      "Ben je een ervaren grondwerker of stratenmaker? Dan weet je hoe mooi het vak is. Maar misschien wil je ook niet nog tien jaar elke dag zwaar straatwerk doen.",
+      "In deze baan werk je nog steeds buiten en met je handen, alleen met veel meer afwisseling. Met een BE-combinatie rijd je vanuit Waddinxveen naar projecten door heel Nederland. Samen met een vaste collega maak je de locatie klaar waar het montageteam daarna een tijdelijke installatie opbouwt. Na afloop herstel je de locatie netjes."
+    ],
+    "taken": [
+      "Bestrating en grond weghalen",
+      "De ondergrond en de locatie voorbereiden",
+      "Laden en lossen",
+      "Zorgen dat alles klaarstaat voor de monteurs",
+      "Overleggen met collega's en andere mensen op de locatie"
+    ],
+    "eisen": [
+      "Echte werkervaring als grondwerker of stratenmaker",
+      "VCA Basis, of je wilt het halen",
+      "Rijbewijs B (BE is een pré)",
+      "Je spreekt goed Nederlands",
+      "Je bent flexibel en werkt graag samen in een team",
+      "Je woont binnen een half uur van Waddinxveen, bijvoorbeeld in Gouda, Boskoop, Alphen aan den Rijn of Zoetermeer, want je begint vroeg"
+    ],
+    "aanbod_titel": "Wat krijg je",
+    "aanbod": [
+      "Een goed salaris op basis van je ervaring, plus vergoedingen",
+      "Bus van de zaak (niet voor privé)",
+      "Goed gereedschap en mooi materieel",
+      "Veel zelfstandigheid en vrijheid",
+      "Een vast team in een nuchter familiebedrijf, waar mensen al meer dan tien jaar werken",
+      "Ruimte om jezelf verder te ontwikkelen"
+    ],
+    "aanbod_tekst": "",
+    "vraag": "Heb je werkervaring als grondwerker of stratenmaker?",
+    "opties": ["Ja", "Een beetje", "Nee"]
+  }
+]

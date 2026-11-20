@@ -343,3 +343,4 @@ fieldset.field{border:0;padding:0;margin:0 0 14px}
   .mobile-only{display:inline-flex;margin-top:4px}
   .how{grid-template-columns:1fr;gap:32px}
 }
+.vac-text .posted{color:var(--ink-2);font-size:14px;margin-top:28px}

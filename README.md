@@ -18,6 +18,18 @@ Dit is de **demo**: statische HTML, CSS en JavaScript, zonder backend. Inloggen,
 - `js/app.js`: alle logica, per pagina via `<body data-page="...">`
 - `docs/plan.md`: plan voor de echte versie
 
+## Vacatures toevoegen of stoppen
+
+Alle live vacatures staan in `data/vacatures.json` (zonder klantnamen). Pas dat bestand aan en draai:
+
+```bash
+python3 build/build.py
+```
+
+Dat maakt `vacature/<code>.html` (met Google for Jobs-gegevens), de kaarten op `index.html`, `sitemap.xml`, `robots.txt` en `api/_vacatures.json`. Daarna pushen.
+
+Welke klant en functie bij een code hoort, staat alleen in het portaal: `JOBBORD_VACATURES` op Railway, als `"code":"Klant | Functie"` (functie exact zoals in het portaal).
+
 ## Lokaal bekijken
 
 Open `index.html` in je browser, of start een simpele server:

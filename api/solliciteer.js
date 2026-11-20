@@ -7,12 +7,8 @@
  */
 const crypto = require('crypto');
 
-// Alleen deze vacaturecodes worden geaccepteerd.
-const VACATURES = new Set([
-  'automonteur-harderwijk',
-  'servicetechnicus-brandmeldinstallaties-prinsenbeek',
-  'grondwerker-waddinxveen',
-]);
+// Alleen deze vacaturecodes worden geaccepteerd (gemaakt door build/build.py).
+const VACATURES = new Set(require('./_vacatures.json'));
 
 const kort = (s, n) => String(s == null ? '' : s).trim().slice(0, n);
 

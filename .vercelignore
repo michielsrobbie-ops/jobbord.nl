@@ -2,3 +2,6 @@ demo/
 logo/
 docs/
 README.md
+data/
+build/
+.env.local

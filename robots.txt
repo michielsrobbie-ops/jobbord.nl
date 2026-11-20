@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /demo/
+Disallow: /api/
+
+Sitemap: https://jobbord.nl/sitemap.xml
