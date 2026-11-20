@@ -26,7 +26,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://jobbord.nl"
-CSS_V = "20261120e"
+CSS_V = "20261120f"
 VANDAAG = datetime.date.today()
 
 # Vaste vakgebieden voor het filter op de homepage (code -> naam). Elke vacature
@@ -210,7 +210,7 @@ def pagina(v):
 {keuzes}
         </div>
       </fieldset>
-      <label class="consent"><input type="checkbox" name="andere"> <span>Ik wil ook gebeld worden over andere vacatures die bij me passen. Bewaar mijn gegevens daarvoor 2 jaar.</span></label>
+      <label class="consent"><input type="checkbox" name="andere"> <span><strong>Ook gebeld worden over andere vacatures?</strong> Past deze baan niet, dan hoor je het als er iets anders bij je past. Je hoeft dan niet opnieuw te solliciteren. We bewaren je gegevens daarvoor 2 jaar.</span></label>
       <p class="err" id="a-err" role="alert" hidden></p>
       <button class="btn" type="submit">Verstuur sollicitatie</button>
       <p class="fine">Je gegevens gaan naar het bedrijf achter deze vacature. Lees de <a href="/privacy">privacyverklaring</a>.</p>
